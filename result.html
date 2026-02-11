@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Quiz Completed</h2>
+  <h3 id="result"></h3>
+  <a href="index.html">Go Home</a>
+</div>
+
+<script>
+  let score = localStorage.getItem("score");
+  let total = JSON.parse(localStorage.getItem("quiz")).length;
+  document.getElementById("result").innerText =
+    "Your Score: " + score + " / " + total;
+</script>
+
+</body>
+</html>
